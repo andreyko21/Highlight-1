@@ -199,15 +199,17 @@ h6 {
 Снипет (HTML): cnt
 */
 
-[class*=__container] {
+[class*=__container-min] {
   padding-left: 133px;
   padding-right: 133px;
 }
 
 [class*=__container-big] {
-  max-width: 85.125rem;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  padding-left: 62px;
+  padding-right: 62px;
 }
 
 .dark {
@@ -2260,7 +2262,7 @@ body::after {
   height: 100%;
 }
 
-.component-10 .full-screen .component-10__container-big .component-10__container {
+.component-10 .full-screen .component-10__container-big .component-10__container-min {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -2271,17 +2273,17 @@ body::after {
           align-items: center;
 }
 
-.component-10 .full-screen .component-10__container-big .component-10__container .component-10__text-block {
+.component-10 .full-screen .component-10__container-big .component-10__container-min .component-10__text-block {
   max-width: 539px;
 }
 
-.component-10 .full-screen .component-10__container-big .component-10__container .component-10__text-block .description {
+.component-10 .full-screen .component-10__container-big .component-10__container-min .component-10__text-block .description {
   margin-top: 24px;
   max-width: 410px;
   opacity: 1;
 }
 
-.component-10 .full-screen .component-10__container-big .component-10__container .component-10__text-block .component-10__list {
+.component-10 .full-screen .component-10__container-big .component-10__container-min .component-10__text-block .component-10__list {
   margin-top: 62px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2289,7 +2291,7 @@ body::after {
   gap: 32px;
 }
 
-.component-10 .full-screen .component-10__container-big .component-10__container .component-10__text-block .component-10__item {
+.component-10 .full-screen .component-10__container-big .component-10__container-min .component-10__text-block .component-10__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2303,25 +2305,25 @@ body::after {
   color: #080808;
 }
 
-.component-11__container-big .component-11__container .sub-title {
+.component-11__container-big .component-11__container-min .sub-title {
   max-width: 380px;
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
 }
 
-.component-11__container-big .component-11__container .description {
+.component-11__container-big .component-11__container-min .description {
   margin-top: 17px;
   max-width: 660px;
 }
 
-.component-11__container-big .component-11__container .button-link.component-11__button-link {
+.component-11__container-big .component-11__container-min .button-link.component-11__button-link {
   margin-top: 40px;
   color: #080808;
 }
 
-.component-11__container-big .component-11__container .button-link.component-11__button-link::before,
-.component-11__container-big .component-11__container .button-link.component-11__button-link::after {
+.component-11__container-big .component-11__container-min .button-link.component-11__button-link::before,
+.component-11__container-big .component-11__container-min .button-link.component-11__button-link::after {
   background: rgba(49, 49, 49, 0.2);
 }
 
@@ -2376,7 +2378,7 @@ body::after {
   margin-bottom: 140px;
 }
 
-.component-13__container {
+.component-13__container-min {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2392,7 +2394,7 @@ body::after {
   row-gap: 24px;
 }
 
-.component-13__container .title {
+.component-13__container-min .title {
   -ms-flex-item-align: start;
       align-self: flex-start;
   -webkit-box-pack: start;
@@ -2401,7 +2403,7 @@ body::after {
   max-width: 417px;
 }
 
-.component-13__container .component-13__right-block {
+.component-13__container-min .component-13__right-block {
   max-width: 366px;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -2410,20 +2412,20 @@ body::after {
           justify-content: flex-end;
 }
 
-.component-13__container .component-13__right-block .description {
+.component-13__container-min .component-13__right-block .description {
   opacity: 1;
 }
 
-.component-13__container .component-13__right-block .send-mail {
+.component-13__container-min .component-13__right-block .send-mail {
   margin-top: 41px;
 }
 
-.component-13__container .component-13__right-block .send-mail__input {
+.component-13__container-min .component-13__right-block .send-mail__input {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.7);
 }
 
-.component-13__container .component-13__right-block .send-mail .absolute-button-input {
+.component-13__container-min .component-13__right-block .send-mail .absolute-button-input {
   position: absolute;
   right: 5px;
   top: 3px;
@@ -4409,9 +4411,14 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 1024px) {
-  [class*=__container] {
+  [class*=__container-min] {
     padding-left: 105px;
     padding-right: 105px;
+  }
+
+  [class*=__container-big] {
+    padding-left: 54px;
+    padding-right: 54px;
   }
 
   .title {
@@ -4856,7 +4863,7 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 768px) {
-  [class*=__container] {
+  [class*=__container-min] {
     width: 100%;
     padding-left: 76px;
     padding-right: 76px;
@@ -5227,10 +5234,15 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 550px) {
-  [class*=__container] {
+  [class*=__container-min] {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  [class*=__container-big] {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .component-3 .component-3__last-block .component-3__text {
