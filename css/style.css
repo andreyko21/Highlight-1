@@ -901,6 +901,7 @@ body::after {
   line-height: 1.7142857143;
   opacity: 0.6;
   max-width: 390px;
+  letter-spacing: 0.06em;
 }
 
 .body__container-big .contact-info .second-block-contact-info {
@@ -908,6 +909,7 @@ body::after {
   display: -ms-grid;
   display: grid;
   row-gap: 4rem;
+  letter-spacing: 0.06em;
   -ms-grid-rows: auto;
       grid-template: "Kiev Lviv Kharkiv Email Email Email Email Email Email Email" "Button item item item item item item item item item";
 }
@@ -2576,6 +2578,20 @@ body::after {
   max-width: 433px;
 }
 
+.component-15 .component-15__container-min-first {
+  position: relative;
+}
+
+.component-15 .component-15__container-min-first .component-16 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.component-15 .component-15__container-min-first .component-16 p {
+  margin-top: 0;
+}
+
 .component-15 .description {
   margin-top: 32px;
   margin-bottom: 32px;
@@ -2737,6 +2753,70 @@ body::after {
   margin-top: 64px;
 }
 
+.component-18 {
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
+.component-18 .oneNewsSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.component-18 .swiper-wrapper {
+  margin-top: 64px;
+}
+
+.component-18 .component-18-description {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  max-width: 253px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.component-18 .component-18-little-text {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 17px;
+  color: #828282;
+}
+
+.component-18 .picture {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.component-18 .one-news-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.component-18 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.component-18 .component-18__container-big {
+  padding-right: 0;
+}
+
+.component-18 .component-18__container-big .component-18__container-min {
+  padding-right: 0;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
 .header {
   background-color: rgba(255, 255, 255, 0.6);
   position: fixed;
@@ -2768,6 +2848,7 @@ body::after {
   color: #080808;
   font-weight: 400;
   line-height: 1.2857142857;
+  letter-spacing: 0.3em;
   z-index: 5;
 }
 
@@ -3064,7 +3145,18 @@ body::after {
   border: 1px solid rgba(8, 8, 8, 0.32);
 }
 
-.contact-body .page {
+.contact-body .burger-text {
+  display: none;
+}
+
+.contact-body .wrapper {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/background-404.svg) no-repeat;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background-404.svg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background-404.svg) no-repeat;
+  background-size: cover;
+}
+
+.contact-body .wrapper .page {
   margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3072,6 +3164,24 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contact-body .wrapper .page .second-block-contact-info__telephone {
+  opacity: 0.6;
+  line-height: 20px;
+}
+
+.contact-body .wrapper .page .second-block-contact-info__address {
+  opacity: 0.6;
+  line-height: 20px;
+}
+
+.contact-body .wrapper .page .social-links {
+  margin-top: 21px;
+}
+
+.contact-body .wrapper .page .footer {
+  background: none;
 }
 
 .about-body .header {
@@ -3136,6 +3246,10 @@ body::after {
   position: relative;
   max-width: 1312px;
   max-height: 652px;
+}
+
+.news-body .burger-text {
+  display: none;
 }
 
 .news-body .wrapper .page .component-13__send-mail input[type=text] {
@@ -4338,6 +4452,18 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media (min-width: 1200px) {
+  .component-15 .description {
+    max-width: 760px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .component-15 .component-15__container-min-last .component-16 {
+    display: none;
+  }
+}
+
 @media (max-width: 1500px) {
   .component-8__absolute-img {
     display: none;
@@ -4393,6 +4519,12 @@ button.swiper-pagination-bullet {
     width: 349px;
     height: 439px;
     top: 124px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .component-15 .component-15__container-min-first .component-16 {
+    display: none;
   }
 }
 
@@ -4536,6 +4668,11 @@ button.swiper-pagination-bullet {
     font-size: 20px;
     line-height: 24px;
     max-width: 270px;
+  }
+
+  .component-18 {
+    margin-top: 124px;
+    margin-bottom: 124px;
   }
 
   .menu-open .header .header__button {
@@ -4946,6 +5083,22 @@ button.swiper-pagination-bullet {
             flex-direction: column;
   }
 
+  .component-13 {
+    margin-bottom: 0px;
+  }
+
+  .component-13__container-min .component-13__right-block {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    max-width: 518px;
+    opacity: 0.6;
+  }
+
+  .component-13__container-min .component-13__right-block .send-mail__input {
+    max-width: 518px;
+  }
+
   .component-14__container-big .component-14__first-block {
     padding-top: 138px;
   }
@@ -4966,6 +5119,19 @@ button.swiper-pagination-bullet {
 
   .component-14__container-big .component-14__gallary .component-14__text-block .description {
     display: none;
+  }
+
+  .component-15 {
+    margin-top: 138px;
+  }
+
+  .component-15 hr {
+    margin-top: 72px;
+  }
+
+  .component-18 {
+    margin-top: 104px;
+    margin-bottom: 104px;
   }
 
   .main-body .gallary-component-1__item:nth-child(3) {
@@ -5223,7 +5389,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 680px) {
   .body__container-big .contact-info {
     padding: 3.125rem 0rem;
   }
@@ -5394,12 +5560,49 @@ button.swiper-pagination-bullet {
     font-size: 36px;
   }
 
+  .component-12__container-big .component-12__gallary {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .component-12__container-big .component-12__gallary .component-12__item.component-12__item-big {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 0;
+    grid-column-end: 1;
+  }
+
   .component-14__container-big .component-14__first-block {
     padding-top: 116px;
   }
 
   .component-14__container-big .component-14__gallary {
     margin-top: 64px;
+  }
+
+  .component-15 {
+    margin-top: 116px;
+  }
+
+  .component-15 .component-15__picture-gallary {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .component-15 .component-15__picture-gallary .component-15__picture:first-child {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 0;
+    grid-column-end: 1;
+  }
+
+  .component-15 hr {
+    margin-top: 64px;
+  }
+
+  .component-18 {
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
 }
 

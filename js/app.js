@@ -3677,6 +3677,36 @@
         });
     }
     function initSliders() {
+        if (document.querySelector(".oneNewsSwiper")) new core(".oneNewsSwiper", {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 3.5,
+            spaceBetween: 40,
+            speed: 800,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 26,
+                    autoHeight: true
+                },
+                450: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20
+                },
+                722: {
+                    slidesPerView: 2.7,
+                    spaceBetween: 40
+                },
+                1024: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 40
+                }
+            },
+            on: {
+                init: function() {},
+                beforeInit: function() {}
+            }
+        });
         if (document.querySelector(".about-swiper")) new core(".about-swiper", {
             modules: [ Navigation, Pagination ],
             observer: true,
