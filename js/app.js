@@ -3900,7 +3900,7 @@
             images_loaded_count++;
             perc_display.innerHTML = "HI " + (100 / images_total_count * images_loaded_count << 0) + "%";
             if (images_loaded_count >= images_total_count) setTimeout((function() {
-                perc_display.innerHTML = "HILight";
+                perc_display.innerHTML = "HILIGHT";
                 if (!preloader.classList.contains("done")) preloader.classList.add("done");
             }), 1e3);
         }
