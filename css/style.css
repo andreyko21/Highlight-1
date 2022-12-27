@@ -255,7 +255,18 @@ h6 {
   outline: none;
 }
 
-.send-mail input:focus ~ .absolute-text-input {
+.send-mail input:not(:-moz-placeholder-shown) ~ .absolute-text-input {
+  top: -7px;
+  font-size: 10px;
+}
+
+.send-mail input:not(:-ms-input-placeholder) ~ .absolute-text-input {
+  top: -7px;
+  font-size: 10px;
+}
+
+.send-mail input:focus ~ .absolute-text-input,
+.send-mail input:not(:placeholder-shown) ~ .absolute-text-input {
   top: -7px;
   font-size: 10px;
 }
@@ -1121,6 +1132,7 @@ body::after {
   max-width: 390px;
   text-align: center;
   margin-top: 18px;
+  opacity: 0.6;
 }
 
 .lorem-ipsum-block__list-picture {
@@ -1724,10 +1736,6 @@ body::after {
   margin-top: 52px;
 }
 
-.component-4 .select-city {
-  background: rgba(255, 255, 255, 0.5);
-}
-
 .component-4 .wrapper-page__absolute-block {
   pointer-events: none;
   z-index: 1;
@@ -1892,7 +1900,7 @@ body::after {
 
 .component-4 .wrapper-page .info-first-section {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   z-index: 1;
 }
 
@@ -3201,11 +3209,7 @@ body::after {
   text-align: left;
 }
 
-.projects-body .component-1 .gallary-component-1__item:nth-child(5) {
-  display: none;
-}
-
-.projects-body .component-1 .gallary-component-1__item:nth-child(n+8) {
+.projects-body .component-1 .gallary-component-1__more {
   display: none;
 }
 
@@ -4802,7 +4806,8 @@ button.swiper-pagination-bullet {
   }
 
   .header__container-big .menu__body .info-first-section {
-    position: absolute;
+    background-color: rgb(8, 8, 8);
+    position: fixed;
     width: 100%;
     bottom: 0;
     display: -webkit-box;
@@ -4810,6 +4815,7 @@ button.swiper-pagination-bullet {
     display: flex;
     padding-left: 1.25rem;
     padding-bottom: 20px;
+    padding-top: 20px;
   }
 
   .menu-open .header__container-big .menu__body {
@@ -4822,6 +4828,7 @@ button.swiper-pagination-bullet {
   }
 
   .header__container-big .menu .menu__list {
+    margin-bottom: 150px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -5230,33 +5237,16 @@ button.swiper-pagination-bullet {
   }
 
   .main-body .gallary-component-1__item:nth-child(3) {
-    display: none;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-row-span: 0;
+    grid-row-end: 2;
   }
 
   .main-body .gallary-component-1__item:nth-child(6) {
     display: block;
-    -ms-grid-row: 4;
-        grid-row-start: 4;
-  }
-
-  .projects-body .component-1 .gallary-component-1__item:nth-child(3) {
-    display: none;
-  }
-
-  .projects-body .component-1 .gallary-component-1__item:nth-child(7) {
-    display: none;
-  }
-
-  .projects-body .component-1 .gallary-component-1__item:nth-child(8).show {
-    display: block;
-    -ms-grid-row: 3;
-        grid-row-start: 3;
-  }
-
-  .projects-body .component-1 .gallary-component-1__item:nth-child(9).show {
-    display: block;
-    -ms-grid-row: 6;
-        grid-row-start: 6;
+    -ms-grid-row: 5;
+        grid-row-start: 5;
   }
 
   .body__container-big .contact-info .second-block-contact-info__Kyiv {
@@ -5418,6 +5408,7 @@ button.swiper-pagination-bullet {
   }
 
   .header__container-big .menu .menu__list {
+    margin-bottom: 0;
     width: 100%;
     margin-top: 152px;
     margin-left: 0 !important;
