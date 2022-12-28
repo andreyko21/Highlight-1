@@ -2616,12 +2616,24 @@ body::after {
 }
 
 .component-14__link {
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   z-index: 5;
   display: block;
+}
+
+.component-14__link .text-img-block {
+  position: absolute;
+  bottom: 46px;
+  left: 46px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  color: #FFFFFF;
+  max-width: 227px;
 }
 
 .component-14__link-2 {
@@ -5152,11 +5164,29 @@ button.swiper-pagination-bullet {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .component-1__container-big .gallary-component-1 .gallary-component-1__img-text {
+    padding: 12px;
+  }
+
+  .component-1__container-big .gallary-component-1 .gallary-component-1__img-text .button-link {
+    margin-top: 12px;
+  }
+
   .component-1__container-big .gallary-component-1 .gallary-component-1__big {
     -ms-grid-column: 1;
         grid-column-start: 1;
     -ms-grid-column-span: 0;
     grid-column-end: 1;
+  }
+
+  .component-1__container-big .gallary-component-1 .gallary-component-1__big .down-text-component-1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 
   .component-2 {
@@ -5221,6 +5251,13 @@ button.swiper-pagination-bullet {
 
   .component-14__container-big .component-14__gallary .component-14__text-block .description {
     display: none;
+  }
+
+  .component-14__link .text-img-block {
+    font-size: 16px;
+    line-height: 126.9%;
+    bottom: 32px;
+    left: 32px;
   }
 
   .component-15 {
@@ -5675,6 +5712,11 @@ button.swiper-pagination-bullet {
 
   .component-14__container-big .component-14__gallary {
     margin-top: 64px;
+  }
+
+  .component-14__link .text-img-block {
+    bottom: 24px;
+    left: 24px;
   }
 
   .component-15 {
