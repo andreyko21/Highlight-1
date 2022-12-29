@@ -3913,17 +3913,19 @@
             var elmToShow = document.querySelectorAll(`.${type}`);
             elmToShow.forEach((elm => elm.classList.add("show")));
         };
+        let sel = document.querySelector(".select-filter");
+        sel.onchange = function(e) {
+            console.log(sel.value);
+            filterSelection(sel.value);
+        };
         document.addEventListener("DOMContentLoaded", (e => {
             var btnContainer = document.getElementById("filter-block");
             var buttons = document.querySelectorAll(".btn");
-            if (document.querySelector(".select-filter")) {
-                let sel = document.querySelector(".select-filter");
-                buttons.forEach((function(c) {
-                    c.onclick = function() {
-                        sel.value = c.innerText;
-                    };
-                }));
-            }
+            if (document.querySelector(".select-filter")) buttons.forEach((function(c) {
+                c.onclick = function() {
+                    sel.value = c.innerText;
+                };
+            }));
             btnContainer.addEventListener("click", (e => {
                 if ("BUTTON" == e.target.nodeName) {
                     buttons.forEach((elm => {
