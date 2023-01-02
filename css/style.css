@@ -616,7 +616,7 @@ body::after {
 }
 
 .popup__close::after {
-  bottom: calc(50% - 0.0625rem);
+  top: calc(50% - 0.0625rem);
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -715,7 +715,15 @@ body::after {
   height: 20px;
 }
 
+.form-popup .form-popup__input-text._error {
+  border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+}
+
 .form-popup input:focus {
+  outline: none;
+}
+
+.form-popup select:focus {
   outline: none;
 }
 
@@ -737,6 +745,11 @@ body::after {
 .form-popup .form-popup__input-text:not(:placeholder-shown) ~ .form-popup__absolute {
   top: -15px;
   font-size: 10px;
+}
+
+.form-popup .form-popup__input-text:has(.default:checked) ~ .form-popup__absolute {
+  top: 0px;
+  font-size: 11px;
 }
 
 .form-popup .area-popup .form-popup__name-input {
@@ -2986,7 +2999,19 @@ body::after {
 }
 
 .component-18 .component-18__container-big {
+  position: relative;
   padding-right: 0;
+}
+
+.component-18 .component-18__container-big .absolute-title-block {
+  top: 0;
+  color: rgba(130, 130, 130, 0.32);
+  gap: 40px;
+}
+
+.component-18 .component-18__container-big .absolute-title-block hr {
+  background-color: rgba(130, 130, 130, 0.32);
+  width: 57px;
 }
 
 .component-18 .component-18__container-big .component-18__container-min {
@@ -3327,9 +3352,9 @@ body::after {
 }
 
 .main__background-image {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.95)), to(rgba(0, 0, 0, 0.95))), url(../img/image23.svg);
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url(../img/image23.svg);
-  background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url(../img/image23.svg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url(../img/image23.svg);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/image23.svg);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/image23.svg);
   background-size: cover;
 }
 
@@ -3356,9 +3381,9 @@ body::after {
 }
 
 .contact-body .wrapper {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.95)), to(rgba(0, 0, 0, 0.95))), url(../img/image23.svg) no-repeat;
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url(../img/image23.svg) no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url(../img/image23.svg) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url(../img/image23.svg) no-repeat;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/image23.svg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/image23.svg) no-repeat;
   background-size: cover;
 }
 
@@ -5041,7 +5066,7 @@ button.swiper-pagination-bullet {
   }
 
   .menu-open .icon-menu::after {
-    bottom: calc(50% - 0.0625rem);
+    top: calc(50% - 0.0625rem);
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
@@ -5680,6 +5705,10 @@ button.swiper-pagination-bullet {
   }
 
   .component-3 .component-3__container-big .absolute-title-block {
+    display: none;
+  }
+
+  .component-18 .component-18__container-big .absolute-title-block {
     display: none;
   }
 }
